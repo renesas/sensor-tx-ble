@@ -79,8 +79,9 @@ td {
     vertical-align: top;
 }
 
-th {
-    background: var(--surface);
+thead th {
+    background: var(--brand);
+    color: #fff;
     text-align: left;
 }
 
@@ -133,7 +134,7 @@ body > h1:first-of-type {
   .toc-level-h3 { margin-left: 1rem !important; }
   .figure { margin: 1.4rem 0 .25rem; }
   .figure-caption { margin: .25rem 0 1.6rem; color: var(--muted); text-align: center; font-size: .92rem; }
-  table tr:first-child th, table tr:first-child td { background: var(--brand); color: #fff; font-weight: 700; }
+  table thead th { background: var(--brand); color: #fff; font-weight: 700; }
   @media (max-width: 640px) { .toc ol { columns: 1; } }
 
   </style>
@@ -148,7 +149,7 @@ body > h1:first-of-type {
 performing Sensor data transmission over BLE using <strong>Renesas
 365</strong>, the industry’s first intelligent, platform-based
 development environment. You will load a complete, ready-to-evaluate
-solution from the <strong>Xplore Hub</strong>, review the system design,
+solution from the <strong>Xplore Developer Hub</strong>, review the system design,
 build the software in the browser, then flash, debug and run it on real
 hardware.</p>
 <p>The solution combines an <strong>RA6E2 MCU</strong>,
@@ -181,9 +182,9 @@ accelerometer.</p>
 
 
 <nav aria-label="Guide contents" class="toc"><h2>Contents</h2><ol><li class="toc-level-h2"><a href="#lab-kit-information">1. Lab Kit Information</a></li><li class="toc-level-h3"><a href="#how-to-get-the-kit">1.1 How to Get the Kit</a></li><li class="toc-level-h3"><a href="#kit-contents">1.2 Kit Contents</a></li><li class="toc-level-h3"><a href="#what-you-need">1.3 What You Need</a></li><li class="toc-level-h2"><a href="#renesas-365-and-the-xplore-hub">2. Renesas 365
-and the Xplore Hub</a></li><li class="toc-level-h3"><a href="#key-features">2.1 Key Features</a></li><li class="toc-level-h2"><a href="#procedure">3. Procedure</a></li><li class="toc-level-h3"><a href="#application-overview">3.1 Application
+and the Xplore Developer Hub</a></li><li class="toc-level-h3"><a href="#key-features">2.1 Key Features</a></li><li class="toc-level-h2"><a href="#procedure">3. Procedure</a></li><li class="toc-level-h3"><a href="#application-overview">3.1 Application
 Overview</a></li><li class="toc-level-h3"><a href="#set-up-the-hardware">3.2 Set Up the Hardware</a></li><li class="toc-level-h3"><a href="#load-the-solution-from-the-xplore-hub">3.3 Load
-the Solution from the Xplore Hub</a></li><li class="toc-level-h3"><a href="#explore-the-workspace">3.4 Explore the
+the Solution from the Xplore Developer Hub</a></li><li class="toc-level-h3"><a href="#explore-the-workspace">3.4 Explore the
 Workspace</a></li><li class="toc-level-h3"><a href="#review-the-system-design-esd">3.5 Review the
 System Design (ESD)</a></li><li class="toc-level-h3"><a href="#open-the-software-project-in-the-web-ide">3.6
 Open the Software Project in the Web IDE</a></li><li class="toc-level-h3"><a href="#build-the-application">3.7 Build the
@@ -250,14 +251,14 @@ access</p></li>
 <li><p>A MyRenesas account to sign in to Renesas 365</p></li>
 </ul>
 <h2 id="renesas-365-and-the-xplore-hub">2. Renesas 365
-and the Xplore Hub</h2>
+and the Xplore Developer Hub</h2>
 <p>Renesas 365 is an intelligent, platform-based development environment
 that connects system design, hardware and software in one workspace.
 Everything in the workspace is contextually modelled by the platform, so
 it understands your design and provides the right information at the
 point of need.</p>
 <p>All Xplore assets are delivered through Renesas 365. The
-<strong>Xplore Hub</strong> is your starting point to find complete
+<strong>Xplore Developer Hub</strong> is your starting point to find complete
 solutions, reference applications and software building blocks, filtered
 by application or board.</p>
 <h3 id="key-features">2.1 Key Features</h3>
@@ -368,10 +369,18 @@ required.</p></li>
 <p class="figure-caption"><em>Figure 3. FPB-RA6E2 with BLE Pmod (top) and accelerometer Pmod
 (bottom)</em></p>
 <h3 id="load-the-solution-from-the-xplore-hub">3.3 Load
-the Solution from the Xplore Hub</h3>
+the Solution from the Xplore Developer Hub</h3>
 <ol type="1">
-<li><p>Open the Xplore Hub in your browser:
-https://renesas.com/Renesas365/Xplore</p></li>
+<li>
+    <p>
+        Open the Xplore Developer Hub in your browser:
+        <a href="https://renesas.com/Renesas365/Xplore"
+           target="_blank"
+           rel="noopener noreferrer">
+            https://renesas.com/Renesas365/Xplore
+        </a>
+    </p>
+</li>
 <li><p>Filter by application or board, or search by
 functionality.</p></li>
 <li><p>Select the <strong>Sensor Transmission over BLE</strong> solution
@@ -380,7 +389,7 @@ and click <strong>Experience now</strong>.</p></li>
 opens with the full working solution in your workspace.</p></li>
 </ol>
 <p class="figure"><img alt="Guide figure" src="media/image4.png" style="width:6.30047in;height:4.09934in"/></p>
-<p class="figure-caption"><em>Figure 4. Xplore Hub: filter by application or board, then click
+<p class="figure-caption"><em>Figure 4. Xplore Developer Hub: filter by application or board, then click
 Experience now</em></p>
 <p><em><strong>Note:</strong></em> This is not a single software
 building block: it is a complete solution, to experiment with or to base
@@ -532,7 +541,7 @@ cloud integration, then build, debug and a running device.</p>
 <p>Use the time saved to explore “what if”: another AI model, a
 different sensor or another part. Suggested next steps:</p>
 <ol type="1">
-<li><p><strong>Visit the Xplore Hub</strong> and find the solutions that
+<li><p><strong>Visit the Xplore Developer Hub</strong> and find the solutions that
 matter to you.</p></li>
 <li><p><strong>Register for Renesas 365</strong> and experiment with the
 platform.</p></li>
@@ -618,6 +627,7 @@ below.</td>
 </table>
 <h2 id="references">6. References</h2>
 <ul>
+<li><p><a href="https://renesas.github.io/sensor-data-transmission-over-ble/">Sensor Data Transmission over BLE Application Documentation</a></p></li>
 <li><p><a href="https://www.renesas.com/en/design-resources/boards-kits/fpb-ra6e2">FPB-RA6E2
 Fast Prototyping Board | Renesas</a></p></li>
 <li><p><a href="https://www.renesas.com/en/design-resources/boards-kits/us159-da14531evz">US159-DA14531EVZ
